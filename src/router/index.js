@@ -1,20 +1,25 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import Home from '../views/Home.vue'
+
+import AddCurrency from '../views/AddCurrency.vue'
+import CurrencyTable from '../views/CurrencyTable.vue'
+import ExchangeConverter from '../views/ExchangeConverter.vue'
 
 const routes = [
   {
     path: '/',
-    name: 'Home',
-    component: Home
+    name: 'AddCurrency',
+    component: AddCurrency
   },
   {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
-  }
+    path: '/CurrencyTable',
+    name: 'CurrencyTable',
+    component: CurrencyTable
+  },
+  {
+    path: '/ExchangeConverter',
+    name: 'ExchangeConverter',
+    component: ExchangeConverter
+  },
 ]
 
 const router = createRouter({
